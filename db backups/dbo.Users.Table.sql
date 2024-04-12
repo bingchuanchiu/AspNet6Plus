@@ -23,14 +23,14 @@ CREATE TABLE [dbo].[System_Users](
 	[updated_at] [datetime2](7) NULL,
 	[created_by] [int] NULL,
 	[updated_by] [int] NULL,
- CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_SystemUsers] PRIMARY KEY CLUSTERED 
 (
 	[system_user_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-SET IDENTITY_INSERT [dbo].[Users] ON 
+SET IDENTITY_INSERT [dbo].[SystemUsers] ON 
 
-INSERT [dbo].[Users] ([system_user_id], [user_type_id], [username], [firstname], [lastname], [emplid], [email], [email_notifications], [thumbnail], [ldap_whenChanged], [ldap_whenCreated], [is_disabled], [lockout_time], [created_at], [updated_at], [created_by], [updated_by]) VALUES (1, NULL, N'bchiu', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[SystemUsers] ([system_user_id], [user_type_id], [username], [firstname], [lastname], [emplid], [email], [email_notifications], [thumbnail], [ldap_whenChanged], [ldap_whenCreated], [is_disabled], [lockout_time], [created_at], [updated_at], [created_by], [updated_by]) VALUES (1, NULL, N'bchiu', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
 SET IDENTITY_INSERT [dbo].[Users] OFF
 GO
