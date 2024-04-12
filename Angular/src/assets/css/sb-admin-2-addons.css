@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/*
+.navbar-img {
+    height: 100px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+*/
+
+/* dep logo */
+
+html .dep-logo {
+  background-image:url('../img/NYC-DEP-Mini-Rez100x76.png') !important;
+  width: 100px !important;
+  height: 70px !important;
+  border: none !important;
+}
+
+html .dep-support-logo {
+  background-image:url('../img/technical-support.svg') !important;
+  width: 100px !important;
+  height: 70px !important;
+  border: none !important;
+}
+
+html .shorthand-appname {
+  font-weight: bold;
+  padding: 0px 4px;
+}
+
+
+html .dep-header-bg, html .dep-sidenav-bg{
+  position: relative;
+}
+
+#sidebarToggleTop {
+  z-index: 999 !important;
+}
+
+html .dep-header-bg::before{
+  content: "helllo";
+  position: absolute;
+  background-image:url('../img/NYC-DEP-bg-header.png') !important;
+  background-size: cover;
+  background-repeat:repeat-x;
+
+  /* cause the hamberger to be not accessible when minimized */
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  opacity: .2;
+}
+
+html .dep-sidenav-bg::before{
+  content: "";
+  position:absolute;
+  background-image:url('../img/NYC-DEP-bg-sidenav.png') !important;
+  background-size:contain;
+  background-repeat:repeat-y;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .1;
+
+}
+
+
+html .bg-white {
+  background-origin: #fff !important;
+}
+
+html .bg-green {
+  background: #019e57 !important;
+}
+
+html .text-white {
+  color: #fff !important;
+}
+
+html .dep-bg-blue {
+  background-origin: #00529c !important;
+  background-size: cover;
+}
+
+html .dep-text-blue {
+  color: #00529c !important;
+}
+
+html .dep-text-green {
+  color: #019e57 !important;
+}
+
+/* DEBUG */
+html body .debug-border, html body .debug-border *{
+  border: 1px red dashed !important;
+}
+
+html body .debug-hidden {
+  display: none !important;
+}
+
+html body .debug-hidden-but-coded {
+  width:0px !important;
+  height:0px !important;
+  padding:0px !important;
+  margin: 0px !important;
+}
+
+html .clearfix {
+ clear: both !important;
+ overflow: auto !important;
+}
+
+html #wrapper #content-wrapper #ApplicationName {
+  flex: 1 0 auto !important;
+  color: #00529c !important;
+  font-weight: bolder !important;
+}
+
+html .w99P{
+  width: 99% !important;
+}
+
+.card-body label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.btn-col {
+  text-align: center;
+  width: 8%;
+}
+
+.notification {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
+.alert {
+  display: none;
+}
+
+.card-header button {
+  float:right;
+}
+
+.modal {
+  width: 85%;
+  margin: 10px 10%;
+}
+
+
+/*
+general table styles
+*/
+
+tr > th {
+  color: #000 !important;
+  background: #D5D8DC !important;
+  border:#D5D8DC solid !important;
+}
+tr:hover {background: #FEFED8 !important;}
+tr:nth-child(even) {background: #EAECEE !important; color: #000 !important;}
+tr:nth-child(odd) {background: #FFF !important; color: #000 !important;}
+
+
+.desc-box{
+  height: 100px !important;
+  overflow: scroll !important;
+}
+
+/*
+@media print
+ {
+   .sidebar{
+     display:none;
+   }
+   .main-panel {
+     z-index:9999;
+     width: 100%;
+     top:0;
+     left:0;
+   }
+ }
+*/

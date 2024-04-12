@@ -1,0 +1,108 @@
+<div class="notification">
+  <div class="alert alert-success fade show" #successAlert hidden>
+    {{title}} saved
+  </div>
+</div>
+
+<form [formGroup]="primaryForm" #formGroupReset class="needs-validation">
+
+<div class="card mx-auto shadow-sm form-container">
+  <div class="card-header"><span>{{title}} Info</span>
+  </div>
+
+  <div class="card-body ml-2 mr-2">
+
+    <div class="container">
+      <div class="row form-row" *ngFor="let element of dynFormBuilder">
+
+        <div class="col">
+
+          <div *ngIf="element.elementType == 'hidden'">
+            <input type="hidden" class="form-control" [formControlName]="element.id"/>
+          </div>
+
+          <div *ngIf="element.elementType == 'infoTextfield'">
+            <label class="form-label">{{element.name}}</label>
+            <input type="text" class="form-control form-control-info" [formControlName]="element.id"/>
+          </div>
+
+          <div *ngIf="element.elementType == 'infoTextarea'">
+            <label class="form-label">{{element.name}}</label>
+            <textarea class="form-control form-control-info" [formControlName]="element.id" [class]="element.class"></textarea>
+          </div>
+
+          <div *ngIf="element.elementType == 'textfield'">
+            <label class="form-label">{{element.name}}</label>
+            <input type="text" class="form-control" [formControlName]="element.id" [required]="element.required"/>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+          <div *ngIf="element.elementType == 'textarea'">
+            <label class="form-label">{{element.name}}</label>
+            <textarea class="form-control" [formControlName]="element.id" [class]="element.class" [required]="element.required"></textarea>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+          <div *ngIf="element.elementType == 'radiobox'">
+            <label class="form-label">{{element.name}}</label>
+            <span *ngFor="let item of element.value | keyvalue : originalOrder;" >
+              <input type="radio" [id]="element.id + item.value" [name]="element.name" [value]="item.key" [required]="element.required" [checked]="getChecked(element.id,item.value)" (click)="setChecked(element.id,item.value)" />
+              <label [for]="element.id + item.value">{{item.value}}</label>
+            </span>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+          <div *ngIf="element.elementType == 'checkbox'">
+            <label class="form-label">{{element.name}}</label>
+            <span *ngFor="let item of element.value | keyvalue : originalOrder;" >
+              <input type="checkbox" [id]="element.id + item.value" [name]="element.name" [value]="item.key" [required]="element.required" [checked]="getChecked(element.id,item.value)" (click)="setChecked(element.id,item.value)"/>
+              <label [for]="element.id + item.value">{{item.value}}</label>
+            </span>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+          <div *ngIf="element.elementType == 'dropdown'">
+            <label class="form-label">{{element.name}}</label>
+            <select class="form-control" [id]="element.id" [name]="element.name" [required]="element.required" (change)="setSelected(element.id,$event)">
+              <option value="">Please Select One</option>
+              <option *ngFor="let item of element.value | keyvalue : originalOrder;" [value]="item.key" [selected]="getChecked(element.id,item.value)">{{item.value}}</option>
+            </select>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+          <div *ngIf="element.elementType == 'listbox'">
+            <label class="form-label">{{element.name}}</label>
+            <select class="form-control" multiple [id]="element.id" [name]="element.name" [required]="element.required" style="width:100%" (change)="setSelected(element.id,$event)">
+              <option *ngFor="let item of element.value | keyvalue : originalOrder;" [value]="item.key" [selected]="getChecked(element.id,item.value)">{{item.value}}</option>
+            </select>
+            <div class="invalid-feedback">
+              {{element.name + " required"}}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pl-0 mt-3">
+        <button *ngIf="SubmitButton == true" type="submit" class="btn btn-primary" dataCY="onSubmit" (click)="onSubmit()">Save</button>
+        <button type="reset" class="btn btn-secondary debug-hidden" dataCY="Cancel" (click)="onReset()">Cancel</button>
+        <button type="button" [ngClass]="SubmitButton == false ? 'btn btn-primary' : 'btn btn-secondary'" data-dismiss="modal" dataCY="Close" #closeModal>Close</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</form>

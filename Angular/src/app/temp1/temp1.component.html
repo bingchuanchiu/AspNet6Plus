@@ -1,0 +1,82 @@
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h3 class="m-0 font-weight-bold text-primary">Job Orders
+          <button data-toggle="modal" data-target="#UserModal" dataCY="setPrimaryIdAdd" class="btn btn-success" (click)="setPrimaryId(null)">Add</button>
+        </h3>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table datatable class="table table-bordered dataTable" width="100%" cellspacing="0" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+
+          <thead>
+            <tr>
+              <th>Contract Number</th>
+              <th>Contractor Name</th>
+              <th>Job Order Number</th>
+              <th>Options</th>
+            </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Contract Number</th>
+            <th>Contractor Name</th>
+            <th>Job Order Number</th>
+            <th>Options</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>JOC-17-EH</td>
+            <td>Community Electric</td>
+            <td>15566325</td>
+            <td class="btn-group" role="group">
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#UserModal">Details</a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>JOC-17-PO</td>
+            <td>Community Electric</td>
+            <td>788954125</td>
+            <td class="btn-group" role="group">
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#UserModal">Details</a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>JOC-17-EH09</td>
+            <td>Delphi Plumbing</td>
+            <td>7843655</td>
+            <td class="btn-group" role="group">
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#UserModal">Details</a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>JOC-17-KK</td>
+            <td>Delphi Plumbing</td>
+            <td>9863145</td>
+            <td class="btn-group" role="group">
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#UserModal">Details</a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>JOC-17-KLLPS</td>
+            <td>Geomatrix</td>
+            <td>896655336</td>
+            <td class="btn-group" role="group">
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#UserModal">Details</a>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  <div>
+
+  <div class="modal" id="UserModal">
+    <!--//<app-users-edit [primaryIdInput]="primaryIdUpdateInput" (refreshParentPage)="setRefreshPage($event)"></app-users-edit>//-->
+  </div>

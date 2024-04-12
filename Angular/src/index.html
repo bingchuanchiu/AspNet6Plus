@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" type="css" href="styles.min.css">
+
+    <title>SB Admin 2 - Tables</title>
+
+</head>
+
+
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion dep-sidenav-bg" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center bg-white" href="index.html">
+                <div class="sidebar-brand-icon">
+                      <!--//<i class="fas fa-laugh-wink"></i>//-->
+                  <div class="dep-logo"></div>
+                </div>
+               <!--//<div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>//-->
+            </a>
+          
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+          
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+          
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+          
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Pages
+            </div>
+          
+            <!-- Nav Item - Pages Collapse Menu -->
+            
+            <app-sidebar></app-sidebar>
+          
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+          
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline nav-item">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>            
+          
+          </ul>
+          
+        
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow dep-header-bg">
+                    
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <div class="form-inline nav-item">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 nav-item">
+                            <i class="fa fa-bars dep-text-green"></i>
+                        </button>
+                    </div>
+
+                    <app-topbar></app-topbar>
+
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav ml-auto">
+                  
+                                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                <li class="nav-item dropdown no-arrow d-sm-none">
+                                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-search fa-fw dep-text-green"></i>
+                                    </a>
+                                    <!-- Dropdown - Messages -->
+                                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                        aria-labelledby="searchDropdown">
+                                        <form class="form-inline mr-auto navbar-search w-100">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control bg-light border-0 small"
+                                                    placeholder="Search for..." aria-label="Search"
+                                                    aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary bg-green" type="button">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                          
+                                <!-- Nav Item - Alerts -->
+                                <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-bell fa-fw dep-text-green"></i>
+                                        <!-- Counter - Alerts -->
+                                        <span class="badge badge-danger badge-counter">3+</span>
+                                    </a>
+                                    <!-- Dropdown - Alerts -->
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="alertsDropdown">
+                                        <h6 class="dropdown-header">
+                                            Alerts Center
+                                        </h6>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="mr-3">
+                                                <div class="icon-circle bg-primary">
+                                                    <i class="fas fa-file-alt text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="small text-gray-500">December 12, 2019</div>
+                                                <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="mr-3">
+                                                <div class="icon-circle bg-success">
+                                                    <i class="fas fa-donate text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="small text-gray-500">December 7, 2019</div>
+                                                $290.29 has been deposited into your account!
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="mr-3">
+                                                <div class="icon-circle bg-warning">
+                                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="small text-gray-500">December 2, 2019</div>
+                                                Spending Alert: We've noticed unusually high spending for your account.
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </li>
+                          
+                                 <!-- Plant Selector -->
+                                <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-industry fa-fw dep-text-green"></i>
+                                    </a>
+                                    <!-- Dropdown - Plants -->
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="messagesDropdown">
+                                        <h6 class="dropdown-header">
+                                            Plant Selector
+                                        </h6>
+                                        <a class="dropdown-item d-flex align-items-center" href="tables.html">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>26th Ward</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Bowery Bay</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Coney Island</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Hunts Points</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Jamaica</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Newtown Creek</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>North River</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Oakwood Beach</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Owls Head</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Port Richmond</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Red Hook</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Rockaway</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Tallman Island</a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <i class="fa-solid fa-industry fa-sm fa-fw mr-2 dep-text-blue"></i>Wards Island</a>
+                            
+                                    </div>                     
+                                </li>
+                          
+                                 <!-- Tech Support 
+                                 <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-life-ring fa-fw dep-text-green"></i>
+                                    </a>
+                               
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="messagesDropdown">
+                                        <h6 class="dropdown-header">
+                                            Tech Support
+                                        </h6>
+                                        
+                                        <form>
+                                            <div class="mb-3">
+                                              <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                                              <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                          </form>
+                          
+                                    </div>                     
+                                </li>-->
+                          
+                                <div class="topbar-divider d-none d-sm-block"></div>
+                          
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown no-arrow">
+                                    <a class="nav-link dropdown-toggle bg-green" href="#" id="userDropdown" role="button"
+                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        
+                                      <app-current-user></app-current-user>
+                          
+                                      <img class="img-profile rounded-circle"
+                                      src="../assets/img/undraw_profile.svg">
+                          
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                       aria-labelledby="userDropdown">
+                                        <app-profilenav></app-profilenav>
+                   
+                                    </div>
+                          
+                              </li>
+                          
+                            </ul>
+                </nav>
+                  
+                
+                <!-- End of Topbar -->
+
+<!--
+=========================================================================================
+========= CONTENT BODY BEGINGS ==========================================================
+=========================================================================================
+-->
+              <!-- Begin Page Content -->
+              <div class="container-fluid">              
+                  <app-root></app-root>
+              </div>
+              <!-- /.container-fluid -->
+<!--
+===================================================================================
+========== CONTENT BODY ENDS ======================================================
+===================================================================================
+-->
+          </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white">
+              <div class="container my-auto">
+                  <div class="copyright text-center my-auto">
+                      <span>Copyright &copy; Your Website 2020</span>
+                  </div>
+              </div>
+          </footer>
+          <!-- End of Footer -->
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+              <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" href="login.html">Logout</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+

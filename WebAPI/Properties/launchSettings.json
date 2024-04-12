@@ -1,0 +1,81 @@
+{
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/HomeAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+
+    },
+    "MVC5 Swagger": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    },
+    "MVC5 HOMEAPI-INT-PROD": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/HomeAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    },
+    "MVC5 HOMEAPI-INT": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/HomeAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Debug"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000",
+      "nativeDebugging": true
+    },
+    "MVC5 PERMISSIONSAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/PermissionsAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Stagging"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    },
+    "MVC5 SETTINGSAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/SettingsAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Stagging"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    },
+    "MVC5 USERSAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/UsersAPI",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Stagging"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000;https://localhost:5001"
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5000",
+      "sslPort": 44317
+    }
+  }
+}

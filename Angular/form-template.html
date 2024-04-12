@@ -1,0 +1,362 @@
+
+
+<form [formGroup]="CMSectionSixDaysForm!" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <mat-form-field appearance="fill" class="col-4">
+        <mat-label>Contractor</mat-label>
+        <!--<input matInput formControlName="contractor" placeholder="contractor" required>-->
+        <mat-select formControlName="contractor" required>
+          <mat-option>None</mat-option>
+          <mat-option value="WDF">WDF</mat-option>
+          <mat-option value="Welkin">Welkin</mat-option>        
+        </mat-select>
+        <mat-error *ngIf="isFieldInvalid('contractor')">The Contractor Name is Required.</mat-error>         
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="col-4">
+        <mat-label>CM Consultant</mat-label>
+        <!--<input matInput type="date" formControlName="cm_consultant" placeholder="cm_consultant" required>-->
+        <input matInput id="cm_consultant" formControlName="cm_consultant" required>
+        <mat-error *ngIf="isFieldInvalid('cm_consultant')">The CM Consultant is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Contract No.</mat-label>
+        <!--<input matInput id="contract_no" formControlName="contract_no" placeholder="contract_no" required>-->
+        <input matInput id="contract_no" formControlName="contract_no" required>
+        <mat-error *ngIf="isFieldInvalid('contract_no')">The Contract No. is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Contract Reg.No.</mat-label>
+        <!--<input matInput id="contract_regno" formControlName="contract_regno" placeholder="contract_regno" required>-->
+        <input matInput id="contract_regno" formControlName="contract_regno" required>
+        <mat-error *ngIf="isFieldInvalid('contract_regno')">The Contract Reg.No. is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Job Order No.</mat-label>
+        <!--<input matInput id="job_orderno" formControlName="job_orderno" placeholder="job_orderno" required>-->
+        <input matInput id="job_orderno" formControlName="job_orderno" required>
+        <mat-error *ngIf="isFieldInvalid('job_orderno')">The Job Order No. is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Status</mat-label>
+        <!--<input matInput type="date" formControlName="status" placeholder="status" required>-->
+        <input matInput id="status" formControlName="status" required>
+        <mat-error *ngIf="isFieldInvalid('status')">Please Enter the Status.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Total Job Order Value</mat-label>
+        <!--<input matInput type="date" formControlName="tjob_ordervalue" placeholder="tjob_ordervalue" required>-->
+        <input matInput id="tjob_ordervalue" formControlName="tjob_ordervalue" required>
+        <mat-error *ngIf="isFieldInvalid('tjob_ordervalue')">The Total Job Order Value is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Partial / Final</mat-label>
+        <!--<input matInput type="date" formControlName="p_f" placeholder="p_f" required>-->
+        <!--<input matInput id="p_f" formControlName="p_f" placeholder="p_f" required>-->
+        <mat-select formControlName="p_f" required>
+          <mat-option value="Partial">Partial</mat-option>
+          <mat-option value="Final">Final</mat-option>
+        </mat-select>
+        <mat-error *ngIf="isFieldInvalid('p_f')">Partial / Final Status is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Invoice #</mat-label>
+        <!--<input matInput type="date" formControlName="invoice_no" placeholder="invoice_no" required>-->
+        <input matInput id="invoice_no" formControlName="invoice_no" required>
+        <mat-error *ngIf="isFieldInvalid('invoice_no')">The Expected & Actual Duration is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Capital Invoice Amount</mat-label>
+        <!--<input matInput type="date" formControlName="cinvoice_amount" placeholder="cinvoice_amount" required>-->
+        <input matInput id="cinvoice_amount" formControlName="cinvoice_amount" required>
+        <mat-error *ngIf="isFieldInvalid('cinvoice_amount')">The Capital Invoice Amount is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Expense Invoice Amount</mat-label>
+        <!--<input matInput type="date" formControlName="einvoice_amount" placeholder="einvoice_amount" required>-->
+        <input matInput id="einvoice_amount" formControlName="einvoice_amount" required>
+        <mat-error *ngIf="isFieldInvalid('einvoice_amount')">The Expense Invoice Amount is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>CM Consultant receives Payment Request</mat-label>
+        <input matInput type="date" formControlName="cm_receive_date" required>
+        <mat-error *ngIf="isFieldInvalid('cm_receive_date')">The CM Consultant receives Payment Request is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>CM Consultant approves Payment Request</mat-label>
+        <input matInput type="date" formControlName="cm_approve_date" required>
+        <mat-error *ngIf="isFieldInvalid('cm_approve_date')">The CM Consultant approves Payment Request is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Expected Duration of Payment Approval (days)</mat-label>
+        <!--<input matInput type="date" formControlName="expdur_cmcon_payment" placeholder="expdur_cmcon_payment" required>-->
+        <input matInput id="expdur_cmcon_payment" formControlName="expdur_cmcon_payment" required>
+        <mat-error *ngIf="isFieldInvalid('expdur_cmcon_payment')">The Expected Duration of Payment Approval (days) is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Actual Duration of Payment Approval (K - J)</mat-label>
+        <!--<input matInput type="date" formControlName="actdur_cmcon_paymentapp" placeholder="actdur_cmcon_paymentapp" required>-->
+        <input matInput id="actdur_cmcon_paymentapp" formControlName="actdur_cmcon_paymentapp" required>
+        <mat-error *ngIf="isFieldInvalid('actdur_cmcon_paymentapp')">The Actual Duration of Payment Approval (K - J) is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Expected and Actual Duration of Payment Approval (M - L)</mat-label>
+        <!--<input matInput type="date" formControlName="variance_exp_actdur_cmcon_paymentapp" placeholder="variance_exp_actdur_cmcon_paymentapp" required>-->
+        <input matInput id="variance_exp_actdur_cmcon_paymentapp" formControlName="variance_exp_actdur_cmcon_paymentapp" required>
+        <mat-error *ngIf="isFieldInvalid('variance_exp_actdur_cmcon_paymentapp')">The Expected and Actual Duration of Payment Approval (M - L) is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label> Payment Request Date</mat-label>
+        <input matInput type="date" formControlName="bwt_cm_payrequest_date" required>
+        <mat-error *ngIf="isFieldInvalid('bwt_cm_payrequest_date')">The Payment Request Date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Payment Request Approval Date</mat-label>
+        <input matInput type="date" formControlName="bwt_cmapproes_payrequest_date" required>
+        <mat-error *ngIf="isFieldInvalid('bwt_cmapproes_payrequest_date')">The Payment Request Approval Date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Expected Duration of Payment Approval</mat-label>
+        <!--<input matInput type="date" formControlName="exp_cm_paymentapproval" placeholder="exp_cm_paymentapproval" required>-->
+        <input matInput id="exp_cm_paymentapproval" formControlName="exp_cm_paymentapproval" required>
+        <mat-error *ngIf="isFieldInvalid('exp_cm_paymentapproval')">The Expected Duration of Payment Approval is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Actual Duration of Payment Approval</mat-label>
+        <!--<input matInput type="date" formControlName="act_cm_paymentapproval" placeholder="act_cm_paymentapproval" required>-->
+        <input matInput id="act_cm_paymentapproval" formControlName="act_cm_paymentapproval" required>
+        <mat-error *ngIf="isFieldInvalid('act_cm_paymentapproval')">The Actual Duration of Payment Approval is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill" >
+        <mat-label>Variance between Expected and Actual Duration of Payment Approval</mat-label>
+        <!--<input matInput type="date" formControlName="variance_exp_actdur_cm_paymentapp" placeholder="variance_exp_actdur_cm_paymentapp" required>-->
+        <input matInput id="variance_exp_actdur_cm_paymentapp" formControlName="variance_exp_actdur_cm_paymentapp" required>
+        <mat-error *ngIf="isFieldInvalid('variance_exp_actdur_cm_paymentapp')">The Variance between Expected and Actual Duration of Payment Approval is Required.</mat-error>
+      </mat-form-field>
+      <div class="example-button-row" appearance="fill" >
+        <button mat-raised-button color="primary" type="submit" [disabled]="jocpaymenttrackingForm?.invalid">Submit</button>
+        <button type="button" (click)="resetUserForm(jocpaymenttrackingForm!)">Reset</button>
+      </div>
+    
+    </div>
+  </form>  
+
+<form [formGroup]="jocTocThreeDaySectionCForm!" (ngSubmit)="onSubmit()">
+<div class="row g-3"> 
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>JOC/TOC Payment Request Date</mat-label>
+    <input matInput type="date" id="section_payrequest_date" formControlName="section_payrequest_date" required>
+    <mat-error *ngIf="isFieldInvalid('section_payrequest_date')">The JOC/TOC Payment Request Date is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>JOC/TOC Payment Approval Date</mat-label>
+    <input matInput type="date" id="section_approves_payrequest_date" formControlName="section_approves_payrequest_date"  required>
+    <mat-error *ngIf="isFieldInvalid('section_approves_payrequest_date')">The JOC/TOC Payment Approval Date is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Expected Duration of JOC/TOC</mat-label>
+    <input matInput id="expdur_section_payapproval" formControlName="expdur_section_payapproval" required>
+    <mat-error *ngIf="isFieldInvalid('expdur_section_payapproval')">The Expected Duration of JOC/TOC is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Actual Duration of JOC/TOC </mat-label>
+    <input matInput id="actdur_section_payapproval" formControlName="actdur_section_payapproval" required>
+    <mat-error *ngIf="isFieldInvalid('actdur_section_payapproval')">The Actual Duration of JOC/TOC is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Variance between Expected & Actual</mat-label>
+    <input matInput id="expdur_cmsection_payapproval" formControlName="expdur_cmsection_payapproval" required>
+    <mat-error *ngIf="isFieldInvalid('expdur_cmsection_payapproval')">The Variance between Expected & Actual is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>JOC/TOC Section Notification Date</mat-label>
+    <input matInput type="date" id="contractor_monthlyrequ_date" formControlName="contractor_monthlyrequ_date" required>
+    <mat-error *ngIf="isFieldInvalid('contractor_monthlyrequ_date')">The JOC/TOC Section Notification Date is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>JOC/TOC Section Fund Approval</mat-label>
+    <input matInput type="date" id="fund_approval_date" formControlName="fund_approval_date" required>
+    <mat-error *ngIf="isFieldInvalid('fund_approval_date')">TheJOC/TOC Section Fund Approval is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Payment Period (begin date)</mat-label>
+    <input matInput type="date" id="payrequest_date" formControlName="payrequest_date" required>
+    <mat-error *ngIf="isFieldInvalid('payrequest_date')">The Payment Period (begin date) is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Payment Period (end date)</mat-label>
+    <input matInput type="date" id="payrequest_enddate" formControlName="payrequest_enddate" required>
+    <mat-error *ngIf="isFieldInvalid('payrequest_enddate')">The Payment Period (end date) is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Monthly Payment Requisition No.</mat-label>
+    <input matInput id="monthly_payrequ_no" formControlName="monthly_payrequ_no" required>
+    <mat-error *ngIf="isFieldInvalid('monthly_payrequ_no')">The Monthly Payment Requisition No. is Required.</mat-error>
+  </mat-form-field>
+  <mat-form-field class="col-4" appearance="fill">
+    <mat-label>Anticipated Submission Date</mat-label>
+    <input matInput type="date" id="antisubmission_date" formControlName="antisubmission_date" required>
+    <mat-error *ngIf="isFieldInvalid('antisubmission_date')">The Anticipated Submission Date is Required.</mat-error>
+  </mat-form-field>
+
+  <div class="example-button-row" appearance="fill">
+    <button mat-raised-button color="primary" type="submit" [disabled]="jocTocSectionCForm?.invalid">Submit</button>
+    <button type="button" (click)="resetUserForm(jocTocSectionCForm!)">Reset</button>
+  </div>
+</div>
+</form>
+  
+  <form [formGroup]="budgetSectionForm!" (ngSubmit)="onSubmit()" >
+
+  <div class="row g-3">
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label class="mat-label">Budget Submission Approval Date</mat-label>
+        <input matInput type="date" formControlName="budget_submission_date" required>
+        <mat-error *ngIf="isFieldInvalid('budget_submission_date')">Budget Submission Approval Date is Required.</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Budget Fund Approval Date</mat-label>
+        <input matInput type="date" formControlName="budget_fund_approval_date" required>
+        <mat-error *ngIf="isFieldInvalid('budget_fund_approval_date')">Budget Fund Approval Date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Exp. Duration of Receipt</mat-label>
+        <input matInput id="expected_duration_fundapproval" formControlName="expected_duration_fundapproval" required>
+        <mat-error *ngIf="isFieldInvalid('expected_duration_fundapproval')">Exp. Duration of Receipt is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Actual Duration of Receipt</mat-label>
+        <input matInput id="actual_duration_fundapproval" formControlName="actual_duration_fundapproval" required>
+        <mat-error *ngIf="isFieldInvalid('actual_duration_fundapproval')">The Actual Duration of Receipt is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Expected & Actual Duration</mat-label>
+        <input matInput id="variance_exp_actdur_budgetapproval" formControlName="variance_exp_actdur_budgetapproval" required>
+        <mat-error *ngIf="isFieldInvalid('variance_exp_actdur_budgetapproval')">The Expected & Actual Duration is Required.</mat-error>
+        <!--<span *If="variance_exp_actdur_budgetapproval.touched">Expected & Actual Duration is required.</span>-->
+      </mat-form-field>
+        
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" type="submit" [disabled]="budgetSectionForm?.invalid">Submit</button>
+        <button type="button" (click)="resetUserForm(budgetSectionForm!)">Reset</button>
+      </div>
+  </div>  
+
+  </form>
+
+  <form [formGroup]="contractsSectionForm!" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>DIP received date</mat-label>
+        <input matInput type="date" formControlName="dip_received_date" required>
+        <mat-error *ngIf="isFieldInvalid('dip_received_date')">The DIP received date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label class="col-4">Notification sent to JOC/TOC</mat-label>
+        <input matInput type="date" formControlName="notification_date" required>
+        <mat-error *ngIf="isFieldInvalid('notification_date')">The Notification sent to JOC/TOC is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Contractor date to DIP date</mat-label>
+        <input matInput type="date" formControlName="cont_dip_date" required>
+        <mat-error *ngIf="isFieldInvalid('cont_dip_date')">The Contractor date to DIP date is Required.</mat-error>
+      </mat-form-field>
+        
+      <div class="example-button-row" appearance="fill">
+        <button mat-raised-button color="primary" type="submit" [disabled]="contractsSectionForm?.invalid">Submit</button>
+        <button type="button" (click)="resetUserForm(contractsSectionForm!)">Reset</button>
+      </div>
+    
+    </div>
+  </form>
+
+  <form [formGroup]="joctocFiveDaysSectionForm!" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Payment  Returned Date</mat-label>
+        <input matInput type="date" formControlName="payreturned_date" required>
+        <mat-error *ngIf="isFieldInvalid('payreturned_date')">The Payment  Returned Date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>JOC/TOC Section Transmit Date</mat-label>
+        <input matInput type="date" formControlName="monthly_requisition_date" required>
+        <mat-error *ngIf="isFieldInvalid('monthly_requisition_date')">The JOC/TOC Section Transmit Date is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Requisition to Contracts Duration</mat-label>
+        <input matInput id="monthly_requisition_duration" formControlName="monthly_requisition_duration" required>
+        <mat-error *ngIf="isFieldInvalid('monthly_requisition_duration')">The Requisition to Contracts Duration is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Section Transmission Duration</mat-label>
+        <input matInput id="monthly_requisition_contract" formControlName="monthly_requisition_contract" required>
+        <mat-error *ngIf="isFieldInvalid('monthly_requisition_contract')">Section Transmission Duration is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Monthly Payment Duration</mat-label>
+        <input matInput id="variance_exp_actdur_payment" formControlName="variance_exp_actdur_payment" required>
+        <mat-error *ngIf="isFieldInvalid('variance_exp_actdur_payment')">Monthly Payment Duration is Required.</mat-error>
+      </mat-form-field>
+        
+      <div class="example-button-row" appearance="fill">
+        <button mat-raised-button color="primary" type="submit" [disabled]="joctocFiveDaysSectionForm?.invalid">Submit</button>
+        <button type="button" (click)="resetUserForm(joctocFiveDaysSectionForm!)">Reset</button>
+      </div>
+    
+    </div>
+  </form>
+
+  <form [formGroup]="ccontractorPaidSectionForm!" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Monthly Requisition Date from JOC/TOC Section</mat-label>
+        <input matInput type="date" formControlName="monthly_requisition_date" required>
+        <mat-error *ngIf="isFieldInvalid('monthly_requisition_date')">The Monthly Requisition Date from JOC/TOC Section is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Requisition Date to ACCO's Office</mat-label>
+        <input matInput type="date" formControlName="acco_requisition_date" required>
+        <mat-error *ngIf="isFieldInvalid('acco_requisition_date')">The Requisition Date to ACCO's Office is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Expected Duration of Contracts to ACCO (days)</mat-label>
+        <input matInput id="acco_requisition_duration" formControlName="acco_requisition_duration" required>
+        <mat-error *ngIf="isFieldInvalid('acco_requisition_duration')">The Expected Duration of Contracts to ACCO (days) is Required.</mat-error>
+      </mat-form-field>
+     
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Actual Duration of Contracts to ACCO</mat-label>
+        <input matInput id="act_durcont_monthlyacco" formControlName="act_durcont_monthlyacco" required>
+        <mat-error *ngIf="isFieldInvalid('act_durcont_monthlyacco')">The Actual Duration of Contracts to ACCO is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Variance between Expected and Actual Duration</mat-label>
+        <input matInput id="variance_exp_actdur_monthlyacco" formControlName="variance_exp_actdur_monthlyacco" required>
+        <mat-error *ngIf="isFieldInvalid('variance_exp_actdur_monthlyacco')">The Variance between Expected and Actual Duration is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Contractor Receives Monthly Payment </mat-label>
+        <input matInput id="contractor_monthly_payment" formControlName="contractor_monthly_payment" required>
+        <mat-error *ngIf="isFieldInvalid('contractor_monthly_payment')">The Contractor Receives Monthly Payment is Required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Expected Duration for Monthly Requisition</mat-label>
+        <input matInput id="exp_dur_monthlyprocess" formControlName="exp_dur_monthlyprocess" required>
+        <mat-error *ngIf="isFieldInvalid('exp_dur_monthlyprocess')">The Expected Duration for Monthly Requisition is Required.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-4" appearance="fill">
+        <mat-label>Submission and Contractor Paid Date</mat-label>
+        <input matInput id="variance_contract_paiddate" formControlName="variance_contract_paiddate" required>
+        <mat-error *ngIf="isFieldInvalid('variance_contract_paiddate')">The Submission and Contractor Paid Date is Required.</mat-error>
+      </mat-form-field>
+                                
+      <div class="example-button-row" appearance="fill">
+        <button mat-raised-button color="primary" type="submit" [disabled]="ccontractorPaidSectionForm?.invalid">Submit</button>
+        <button type="button" (click)="resetUserForm(ccontractorPaidSectionForm!)">Reset</button>
+      </div>
+    
+    </div>
+  </form>
+
+

@@ -1,0 +1,50 @@
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h3 class="m-0 font-weight-bold text-primary">GroupAssignedOus
+          <button data-toggle="modal" data-target="#GroupAssignedOuModal" dataCY="setPrimaryIdAdd" class="btn btn-success" (click)="setPrimaryId(null)">Add</button>
+        </h3>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table datatable class="table table-bordered dataTable" width="100%" cellspacing="0" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+
+            <thead>
+            <tr>
+              <th *ngFor="let header of tableTH;">
+                {{header}}
+              </th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th *ngFor="let header of tableTH;">
+                {{header}}
+              </th>
+              <th>Options</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr *ngFor="let entity of entities ">
+
+              <td *ngFor="let item of tableTH">
+                <div *ngIf="stringService.isDateTime(entity[item]) == false" [ngClass]="stringService.isDescBox(entity[item])">{{stringService.getBrokenLongString(entity[item])}}</div>
+                <div *ngIf="stringService.isDateTime(entity[item]) == true">{{stringService.getDateTime(entity[item]) | date: 'short'}}</div>
+              </td>
+
+              <td class="btn-group" role="group">
+                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#GroupAssignedOuModal" (click)="setPrimaryId(entity)">Edit</a>
+                <a href="#" class="btn btn-danger" (click)="removeRecord(entity)">Remove</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <div>
+
+
+  <div class="modal" id="GroupAssignedOuModal">
+    <app-group-assigned-ous-edit [primaryIdInput]="primaryIdUpdateInput" (refreshParentPage)="setRefreshPage($event)"></app-group-assigned-ous-edit>
+  </div>
