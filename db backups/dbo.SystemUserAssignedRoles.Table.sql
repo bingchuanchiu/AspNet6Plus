@@ -1,4 +1,4 @@
-﻿USE [JOCPaymentTracking]
+--﻿USE [JOCPaymentTracking]
 GO
 /****** Object:  Table [dbo].[UserAssignedRoles]    Script Date: 8/30/2023 3:21:59 PM ******/
 SET ANSI_NULLS ON
