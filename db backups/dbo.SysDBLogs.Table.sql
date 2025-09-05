@@ -14,12 +14,13 @@ CREATE TABLE [dbo].[SysDBLogs](
 	[column_new_value] [nvarchar](max) NULL,
 	[created_at] [datetime2](7) NULL,
 	[created_by] [int] NULL,
- CONSTRAINT [PK_SystemDBLogs] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_SysDBLogs] PRIMARY KEY CLUSTERED 
 (
 	[Sys_db_log_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[SysDBLogs] ADD  CONSTRAINT [DF_SystemDBLogs_created_at]  DEFAULT (getdate()) FOR [created_at]
+ALTER TABLE [dbo].[SysDBLogs] ADD  CONSTRAINT [DF_SysDBLogs_created_at]  DEFAULT (getdate()) FOR [created_at]
 GO
+
 
