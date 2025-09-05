@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[SysConfirmatonCodes](
 	[code] [nchar](10) NULL,
 	[url] [nvarchar](150) NULL,
 	[created_at] [datetime2](7) NOT NULL,
- CONSTRAINT [PK_SystemConfirmatonCodes] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_SysConfirmatonCodes] PRIMARY KEY CLUSTERED 
 (
 	[Sys_confirmation_code_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
@@ -23,4 +23,5 @@ REFERENCES [dbo].[SysUsers] ([Sys_user_id])
 GO
 ALTER TABLE [dbo].[SysConfirmatonCodes] CHECK CONSTRAINT [FK_SystemConfirmatonCodes_SystemUsers]
 GO
+
 
