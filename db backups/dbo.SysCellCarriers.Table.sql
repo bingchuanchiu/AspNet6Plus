@@ -10,10 +10,11 @@ CREATE TABLE [dbo].[SysCellCarriers](
 	[cell_carrier_name] [nvarchar](150) NOT NULL,
 	[sms_gateway] [nvarchar](150) NOT NULL,
 	[sms_notifications] [bit] NULL,
- CONSTRAINT [PK_SystemCellCarriers] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_SysCellCarriers] PRIMARY KEY CLUSTERED 
 (
 	[Sys_cell_carrier_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 
