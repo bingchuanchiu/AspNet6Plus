@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[SysUserAssignedCellCarriers](
 	[active] [bit] NULL,
  CONSTRAINT [PK_SysUserAssignedCellCarriers] PRIMARY KEY CLUSTERED 
 (
-	[Sys_user_assigned_Sys_cell_carrier_id] ASC
+	[Sys_user_assigned_cell_carrier_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -27,4 +27,5 @@ REFERENCES [dbo].[SysUsers] ([Sys_user_id])
 GO
 ALTER TABLE [dbo].[SysUserAssignedCellCarriers] CHECK CONSTRAINT [FK_SysUserAssignedCellCarriers_Users]
 GO
+
 
