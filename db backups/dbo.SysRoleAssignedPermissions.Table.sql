@@ -6,7 +6,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[SysRoleAssignedPermissions](
-	[Sys_role_assigned_Sys_permission_id] [int] IDENTITY(1,1) NOT NULL,
+	[Sys_role_assigned_permission_id] [int] IDENTITY(1,1) NOT NULL,
 	[Sys_permission_id] [int] NOT NULL,
 	[Sys_role_id] [int] NOT NULL,
  CONSTRAINT [PK_SysRoleAssignedPermissions] PRIMARY KEY CLUSTERED 
@@ -25,4 +25,5 @@ REFERENCES [dbo].[SysPermissions] ([Sys_permission_id])
 GO
 ALTER TABLE [dbo].[SysRoleAssignedPermissions] CHECK CONSTRAINT [FK_SysRoleAssignedPermissions_SysPermissions]
 GO
+
 
