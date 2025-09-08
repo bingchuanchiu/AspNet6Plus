@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[efPasswords](
 	[ef_password_id] [int] IDENTITY(1,1) NOT NULL,
 	[ef_user_id] [int] NULL,
 	[password_secret] [nvarchar](max) NULL,
-	[never_expires] [bit] NULL,
+	[disabled] [bit] NULL,
 	[created_at] [datetime2](7) NULL,
 	[updated_at] [datetime2](7) NULL,
  CONSTRAINT [PK_efPasswords] PRIMARY KEY CLUSTERED 
@@ -23,5 +23,6 @@ REFERENCES [dbo].[efUsers] ([ef_user_id])
 GO
 ALTER TABLE [dbo].[efPasswords] CHECK CONSTRAINT [FK_efPasswords_Users]
 GO
+
 
 
