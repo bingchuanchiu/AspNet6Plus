@@ -6,12 +6,12 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[SysOUAssignedRoles](
-	[Sys_ou_assigned_Sys_role_id] [int] IDENTITY(1,1) NOT NULL,
+	[Sys_ou_assigned_role_id] [int] IDENTITY(1,1) NOT NULL,
 	[Sys_ou_id] [int] NULL,
 	[Sys_role_id] [int] NULL,
  CONSTRAINT [PK_SysOUAssignedRoles] PRIMARY KEY CLUSTERED 
 (
-	[Sys_ou_assigned_Sys_role_id] ASC
+	[Sys_ou_assigned_role_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -25,4 +25,5 @@ REFERENCES [dbo].[SysRoles] ([Sys_role_id])
 GO
 ALTER TABLE [dbo].[SysOUAssignedRoles] CHECK CONSTRAINT [FK_SysOUAssignedRoles_Roles]
 GO
+
 
