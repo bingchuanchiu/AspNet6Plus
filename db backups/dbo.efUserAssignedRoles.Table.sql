@@ -15,14 +15,15 @@ CREATE TABLE [dbo].[SysUserAssignedRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[SysUserAssignedRoles]  WITH CHECK ADD  CONSTRAINT [FK_SysUserAssignedRoles_Roles] FOREIGN KEY([Sys_role_id])
+ALTER TABLE [dbo].[SysUserAssignedRoles]  WITH CHECK ADD  CONSTRAINT [FK_SysUserAssignedRoles] FOREIGN KEY([Sys_role_id])
 REFERENCES [dbo].[SysRoles] ([Sys_role_id])
 GO
-ALTER TABLE [dbo].[SysUserAssignedRoles] CHECK CONSTRAINT [FK_SysUserAssignedRoles_Roles]
+ALTER TABLE [dbo].[SysUserAssignedRoles] CHECK CONSTRAINT [FK_SysUserAssignedRoles]
 GO
-ALTER TABLE [dbo].[SysUserAssignedRoles]  WITH CHECK ADD  CONSTRAINT [FK_SysUserAssignedRoles_SysUsers] FOREIGN KEY([Sys_user_id])
+ALTER TABLE [dbo].[SysUserAssignedRoles]  WITH CHECK ADD  CONSTRAINT [FK_SysUserAssignedRoles] FOREIGN KEY([Sys_user_id])
 REFERENCES [dbo].[SysUsers] ([Sys_user_id])
 GO
-ALTER TABLE [dbo].[SysUserAssignedRoles] CHECK CONSTRAINT [FK_SysUserAssignedRoles_SysUsers]
+ALTER TABLE [dbo].[SysUserAssignedRoles] CHECK CONSTRAINT [FK_SysUserAssignedRoles]
 GO
+
 
