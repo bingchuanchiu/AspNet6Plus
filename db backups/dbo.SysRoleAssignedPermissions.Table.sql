@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[SysRoleAssignedPermissions](
 	[Sys_role_id] [int] NOT NULL,
  CONSTRAINT [PK_SysRoleAssignedPermissions] PRIMARY KEY CLUSTERED 
 (
-	[Sys_role_assigned_Sys_permission_id] ASC
+	[Sys_role_assigned_permission_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -25,5 +25,6 @@ REFERENCES [dbo].[SysPermissions] ([Sys_permission_id])
 GO
 ALTER TABLE [dbo].[SysRoleAssignedPermissions] CHECK CONSTRAINT [FK_SysRoleAssignedPermissions_SysPermissions]
 GO
+
 
 
